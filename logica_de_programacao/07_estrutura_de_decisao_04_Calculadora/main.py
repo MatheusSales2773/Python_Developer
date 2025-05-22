@@ -2,8 +2,6 @@
 Criar programa que irá receber do usuário dois números reais e o usuário irá escolher uma das quatro operações básicas da matemática, e o programa irá calcular com base na escolha do usuário e informar o resultado
 '''
 
-# TODO
-
 # Declaração de variáveis
 x = float(input("Informa o valor de X: ").replace(",", "."))
 y = float(input("Informa o valor de Y: ").replace(",", "."))

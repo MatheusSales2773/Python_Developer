@@ -1,0 +1,18 @@
+Python Path
+
+
+Instalação Vs code(extensions)
+-Dracula
+-Material Icon
+-Python
+-Jupyter
+-Portuguese
+-Error Lens
+-Git Graph
+-Pycharm
+
+ativar after delay nas config
+
+Criar ambiente virtual:
+python -m venv .venv OU F1 no vscode ----> escrever: criar ambiente virtual venv ----> selecionar versão python
+.venv\Scripts\activate
