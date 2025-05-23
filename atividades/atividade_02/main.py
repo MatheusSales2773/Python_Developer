@@ -13,6 +13,7 @@ O usuário deverá escolher a sala do filme que deseja assistir, e o programa de
 # O usuário informa os números
 nome = input("Coloque seu nome: ")
 idade = int(input("Qual sua idade: "))
+choice = None
 
 while True:
 
@@ -23,7 +24,7 @@ while True:
     print("Sala 4 - As tranças do Rei Careca - 16 anos")
     print("Sala 5 - A Vingança do Frango Assado - 18 anos")
 
-    # O usuário escolhe a operação
+    # O usuário escolhe a sala
     salas = input("Escolha o número da Sala: ").strip()
 
     match salas:
@@ -33,30 +34,36 @@ while True:
 
         case "2": 
             print(f"{nome} decidiu assistir A Volta dos Que Não Foram - 12 anos" if idade >= 12 else "Idade não permitida. Escolha outro filme")
-            choice = "A Volta dos Que Não Foram"
+            if idade >= 12: choice = "A Volta dos Que Não Foram"
 
         case "3":
             print(f"{nome} decidiu assistir Poeira em Alto Mar - 14 anos" if idade >= 14 else "Idade não permitida. Escolha outro filme")
-            choice = "Poeira em Alto Mar"
+            if idade >= 14:choice = "Poeira em Alto Mar"
 
         case "4":
             print(f"{nome} As tranças do Rei Careca - 16 anos" if idade >= 16 else "Idade não permitida. Escolha outro filme")
-            choice = "As tranças do Rei Careca"
+            if idade >= 16: choice = "As tranças do Rei Careca"
 
         case "5":
-            print(f"{nome} decidiu assistir A Vingança do Frango Assado - 18 anos" if idade >= 18 else "Idade não permitida. Escolha outro filme")
-            choice = "A Vingança do Frango Assado"
+            print(f"{nome} decidiu assistir A Vingança do Frango Assado - 18 anos" if idade >= 18  else "Idade não permitida. Escolha outro filme")
+            if idade >= 18: choice = "A Vingança do Frango Assado"
+            
         
         case _:
             print("Número da sala incorreto, porfavor escolha um número de 1 a 5")
     
-    # Pergunta se o usuário deseja escolher outro filme
-    confirmação = input("Deseja escolher outro filme? (s/n): ").strip().lower()
-    if confirmação in ["s", "sim", "ss"]:
-        print("Escolha outro filme, porfavor")
-    elif confirmação in ["n", "não", "nao"]:
-        print(f"Obrigado pela preferência {nome} e por escolher o {choice}, bom filme!!!")
+    # verificação de idade
+    if choice:
+        print(f"Obrigado pela preferência {nome} e por escolher {choice}, bom filme!!!")
         break
-    else:        
-        print("Opção inválida. Encerrando o programa.")
-        break
+    # Pergunta se o usuário deseja escolher outro filme    
+    else:
+        confirmação = input("Deseja escolher outro filme? (s/n): ").strip().lower()
+        if confirmação in ["s", "sim", "ss"]:
+            print("Escolha outro filme, porfavor")
+        elif confirmação in ["n", "não", "nao"]:
+            print("Encerrando o programa, até a próxima")
+            break
+        else:        
+            print("Opção inválida. Encerrando o programa.")
+            break
