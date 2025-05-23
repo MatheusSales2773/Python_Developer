@@ -5,12 +5,10 @@ Crie um programa que receba do usuário dois números reais, e uma das 4 operaç
 # NOTE - O programa só se encerrará caso o usuário informe isso no programa.
 
 while True:
-
-    x = int(input("Coloque o número inteiro x: "))
-    y = int(input("Coloque o número inteiro y: "))
-
+    
     # menu
     print(f"{'-'*20} CALCULADORA PYTHON{'-'*20}")
+    print("0 - sair do programa")
     print("1 - Soma")
     print("2 - Subtração")
     print("3 - Multiplicação")
@@ -19,14 +17,29 @@ while True:
     menu = input("Insira a opção desejada: ").strip()
 
     match menu:
+        case "0":
+            print("Programa encerrado.")
+            break
         case "1":
+            x = int(input("Coloque o número inteiro x: "))
+            y = int(input("Coloque o número inteiro y: "))
             print(f"A soma dos números é: {x+y}")
+
         case "2":
+            x = int(input("Coloque o número inteiro x: "))
+            y = int(input("Coloque o número inteiro y: "))            
             print(f"A subratração dos números é: {x-y}")
+
         case "3":
+            x = int(input("Coloque o número inteiro x: "))
+            y = int(input("Coloque o número inteiro y: "))
             print(f"A multiplicação dos números é: {x*y}")
+
         case "4":
+            x = int(input("Coloque o número inteiro x: "))
+            y = int(input("Coloque o número inteiro y: "))
             print(f"A divisão dos números é: {x/y}")
+
         case _:
             print("Opção inválida")
 
