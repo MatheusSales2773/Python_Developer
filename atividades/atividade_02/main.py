@@ -9,7 +9,6 @@ O usuário deverá escolher a sala do filme que deseja assistir, e o programa de
 - Liberar a entrada do usuário e encerrar, caso o usuário tenha a idade mínima, ou maior.
 - Bloquear a entrada do usuário e pedir para o mesmo escolher outro filme, caso não tenha a idade mínima.
 """
-# TODO
 
 # O usuário informa os números
 nome = input("Coloque seu nome: ")
